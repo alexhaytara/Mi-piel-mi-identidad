@@ -3,7 +3,11 @@ import { Calendar, Trash2, Plus, Check, Edit3, Loader2, Save } from 'lucide-reac
 import { db, auth } from '../services/firebase'; // Ajusta la ruta a tu archivo de configuración de Firebase
 import { doc, getDoc, setDoc, deleteDoc, serverTimestamp } from 'firebase/firestore';
 
-export const RegistroPage: React.FC = () => {
+interface RegistroPageProps {
+  userId?: string;
+}
+
+export const RegistroPage: React.FC <RegistroPageProps> = () => {
   // Estado de carga/guardado
   const [loading, setLoading] = useState<boolean>(true);
   const [saving, setSaving] = useState<boolean>(false);

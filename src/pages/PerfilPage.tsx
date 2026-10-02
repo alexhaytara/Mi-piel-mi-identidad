@@ -1,9 +1,8 @@
-// src/pages/PerfilPage.tsx
 import React, { useState, useEffect } from 'react';
 import { guardarPerfil, obtenerPerfil } from '../services/dbService';
 
 interface PerfilPageProps {
-  userId: string;
+  userId?: string;
   setUserName?: (name: string) => void;
 }
 

@@ -1,5 +1,4 @@
-// src/App.tsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import type { User } from 'firebase/auth';
 import fondoImg from './assets/fondo.jpg';
 import { Navbar } from './components/Navbar';

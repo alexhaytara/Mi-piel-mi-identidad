@@ -10,7 +10,11 @@ import {
   Waves
 } from 'lucide-react';
 
-export const RutinaPage: React.FC = () => {
+interface RutinaPageProps {
+  userId?: string;
+}
+
+export const RutinaPage: React.FC <RutinaPageProps>= () => {
   // Estado para desplegar pasos
   const [openStepManana, setOpenStepManana] = useState<number | null>(null);
   const [openStepNoche, setOpenStepNoche] = useState<number | null>(null);

@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 interface InicioPageProps {
-  userName: string;
+  userName?: string;
   setActiveTab: (tab: string) => void;
 }
 
