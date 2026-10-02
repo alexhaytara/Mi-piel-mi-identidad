@@ -24,6 +24,11 @@ export const PerfilPage: React.FC<PerfilPageProps> = ({ userId, setUserName }) =
   // 1. Cargar el perfil existente desde Firebase Firestore
   useEffect(() => {
     const cargarDatosPerfil = async () => {
+      if (!userId) {
+        setCargando(false);
+        return;
+      }
+
       try {
         const datos = await obtenerPerfil(userId);
         if (datos) {
@@ -40,11 +45,16 @@ export const PerfilPage: React.FC<PerfilPageProps> = ({ userId, setUserName }) =
       }
     };
 
-    if (userId) cargarDatosPerfil();
+    cargarDatosPerfil();
   }, [userId]);
 
   // 2. Guardar en Firebase Firestore
   const handleGuardar = async () => {
+    if (!userId) {
+      alert("No se encontró el ID de usuario para guardar el perfil.");
+      return;
+    }
+
     setGuardando(true);
     setMensajeExito(false);
     const fechaHoy = obtenerFechaHoy();

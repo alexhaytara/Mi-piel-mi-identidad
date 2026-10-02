@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { 
-  Calendar, 
   CheckCircle2, 
   ArrowRight, 
   Lightbulb, 
-  Sparkles, 
   Sun, 
   Moon, 
   BookOpen, 

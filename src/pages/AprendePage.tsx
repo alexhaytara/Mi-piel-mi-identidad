@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, BookOpen, CheckCircle, ShieldAlert, Sparkles } from 'lucide-react';
+import { ArrowLeft, BookOpen, CheckCircle, Sparkles } from 'lucide-react';
 
 // Importación de imágenes
 import inicio01 from '../assets/inicio01.png';
