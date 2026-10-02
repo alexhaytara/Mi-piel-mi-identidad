@@ -14,11 +14,13 @@ import {
 // 1. PERFIL Y AJUSTES
 // ==========================================
 export interface PerfilData {
-  nombre: string;
-  tipoPiel: string;
-  condicion: string;
-  sensibilidad: string;
+  nombre?: string;
+  tipoPiel?: string;
+  condicion?: string;
+  sensibilidad?: string;
   notificaciones?: boolean;
+  notas?: string;
+  fechaActualizacion?: string;
 }
 
 export const guardarPerfil = async (userId: string, data: PerfilData) => {
