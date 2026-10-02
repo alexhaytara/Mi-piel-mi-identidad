@@ -40,8 +40,11 @@ export const LoginModal: React.FC<LoginModalProps> = ({ onLoginSuccess }) => {
         if (onLoginSuccess) onLoginSuccess(nombreFinal);
       } else {
         // 1. Iniciar sesión en Firebase Auth
-        //const user = await iniciarSesion(email, password);
-        if (onLoginSuccess) onLoginSuccess(nombre || email.split('@')[0]);
+        const userCredential = await iniciarSesion(email, password);
+        const user = userCredential.user;
+        
+        const nombreMostrar = user.displayName || nombre || email.split('@')[0];
+        if (onLoginSuccess) onLoginSuccess(nombreMostrar);
       }
     } catch (err: any) {
       console.error(err);
