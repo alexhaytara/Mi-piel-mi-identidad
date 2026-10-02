@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta de colores extraída de tus imágenes */
+  --color-brand-50: #fcf8ff;
+  --color-brand-100: #f3e8ff;
+  --color-brand-200: #e9d5ff;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  
+  --color-sage-50: #f0fdf4;
+  --color-sage-100: #dcfce7;
+  --color-sage-500: #22c55e;
+  --color-sage-700: #15803d;
+
+  --color-peach-100: #ffedd5;
+  --color-peach-500: #f97316;
+
+  --color-bg-canvas: #fbf9f6;
+}
+
+body {
+  background-color: var(--color-bg-canvas);
+  color: #334155;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
